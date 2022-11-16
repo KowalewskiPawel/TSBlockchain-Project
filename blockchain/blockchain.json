@@ -1,0 +1,14 @@
+[
+  {
+    "hash": "0",
+    "previousHash": "0",
+    "nonce": 0,
+    "transactions": [
+      {
+        "senderAddress": "0",
+        "receiverAddress": "0000",
+        "amount": 19000000
+      }
+    ]
+  }
+]

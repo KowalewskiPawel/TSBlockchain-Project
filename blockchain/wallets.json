@@ -1,0 +1,14 @@
+{
+  "pawel": {
+    "publicKey": "04bfe2699f17f557a634c30d97f01007ee3707dce077a1fa9f5ece15dd2dd32bdc47173bf1af0f2efc02dda67a81304e87",
+    "privateKey": "fa423639c56e1131f98cb5ef04dfd0fbf714d8358472b531"
+  },
+  "krzysiek": {
+    "publicKey": "04abbadd127cc02add29e489afefd896e656b47a0f9d8caa7f3717383543a419c7c4ca6b6b608f73117c30159b084958e8",
+    "privateKey": "459f0983669b19180d50c78eb5d4152f0f64c8a04d7d8551"
+  },
+  "test": {
+    "publicKey": "041f42e43649087db9c279b738b0d1ec05ee0fa32a11973f5dd75e9b6e6a9bcaa7f6ea34e9f29b21ee93bdd928b770c128",
+    "privateKey": "1160931852466e9e44176f558449ce743d068ee04863acde"
+  }
+}

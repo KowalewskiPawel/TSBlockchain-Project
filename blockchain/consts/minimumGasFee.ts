@@ -1,0 +1,1 @@
+export const MINIMUM_GAS_FEE = 0.000000000001;
