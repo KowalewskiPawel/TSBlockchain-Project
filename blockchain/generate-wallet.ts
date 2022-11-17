@@ -1,6 +1,6 @@
 import { ec, getWallets, writeWallets } from "./utils";
 
-const newWalletName = process.argv[2];
+export const generateWallet = (newWalletName: string) => {
 const currentWallets = getWallets();
 
 if (currentWallets[newWalletName]) throw Error("The account name already exist");
@@ -16,3 +16,4 @@ const newWallet = {
 };
 
 writeWallets({ ...currentWallets, ...newWallet });
+}
