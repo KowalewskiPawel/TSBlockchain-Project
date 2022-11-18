@@ -3,10 +3,8 @@ import { Transaction } from "./types";
 import {
   ec,
   getAddressBalance,
-  getTransactions,
   getUnixTimestamp,
   newUuid,
-  writeTransactions,
 } from "./utils";
 
 export const transfer = (
@@ -22,15 +20,13 @@ export const transfer = (
   const senderKeypair = ec.keyFromPrivate(senderPrivateKey);
   const senderPublicAddress = senderKeypair.getPublic("hex");
   const signature = senderKeypair
-    .sign(senderPublicAddress + amount)
+    .sign(senderPublicAddress + amount + gasFee)
     .toDER("hex");
 
   const isBalanceEnough =
     getAddressBalance(senderPublicAddress) >= amount + gasFee;
 
   if (!isBalanceEnough) throw Error("Insufficient balance");
-
-  const currentTransactions = getTransactions();
 
   const transaction: Transaction = {
     transactionId: newUuid(),
@@ -42,5 +38,5 @@ export const transfer = (
     signature,
   };
 
-  writeTransactions([...currentTransactions, transaction]);
+  return transaction;
 };
