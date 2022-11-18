@@ -1,5 +1,7 @@
 import { genesisBlock } from "./consts";
 import { writeBlockchain, writeTransactions } from "./utils";
 
-writeBlockchain([genesisBlock]);
-writeTransactions([]);
+export const initBlockchain = () => {
+  writeBlockchain([genesisBlock]);
+  writeTransactions([]);
+};
